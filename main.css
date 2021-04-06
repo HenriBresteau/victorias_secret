@@ -50,6 +50,33 @@ img {
 .master-header {
   grid-column: 2/-1;
   grid-row: span 1;
+  display: flex;
+  align-items: center;
+}
+
+.contianer {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-list {
+  display: flex;
+  list-style-type: none;
+}
+.nav-item {
+  margin-left: 5rem;
+}
+.navlink {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #6a6768;
 }
 
 .main-content {
