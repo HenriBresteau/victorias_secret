@@ -39,6 +39,8 @@ img {
 .sidebar span {
   transform: rotate(-90deg);
   color: #484848;
+  animation: fadde-in ease-in 0.5s 0.2s forwards;
+  opacity: 0;
 }
 .sidebar span:nth-child(2) {
   width: 2px;
@@ -53,9 +55,10 @@ img {
   grid-row: span 1;
   display: flex;
   align-items: center;
+  animation: fadde-in ease-in 0.5s;
 }
 
-.contianer {
+.container {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
@@ -99,9 +102,13 @@ img {
   font-weight: 400;
   margin-bottom: 3rem;
   color: #000;
+  opacity: 0;
+  animation: fadde-in-down ease-in 0.5s 0.5s forwards;
 }
 .item-description {
   margin-bottom: 4rem;
+  opacity: 0;
+  animation: fadde-in-down ease-in 0.5s 1s forwards;
 }
 .btn {
   display: inline-block;
@@ -112,6 +119,8 @@ img {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
+  opacity: 0;
+  animation: fadde-in-down ease-in 0.5s 1.5s forwards;
 }
 
 .image-wrapper {
@@ -139,8 +148,38 @@ img {
   z-index: -1;
 }
 
-
 .master-footer {
   grid-column: 2/-1;
   grid-row: 4/5;
+}
+.master-footer span {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #d8d8d8;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+span.selected {
+  width: 3.5rem;
+  border-radius: 2rem;
+  background-color: #b61428;
+}
+@keyframes fadde-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadde-in-down {
+  from {
+    transform: translateY(-2.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
